@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.simon.fragmentsnav.databinding.FragmentOneBinding
 
@@ -33,6 +34,7 @@ class FragmentOne : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.buttonToFragmentTwo.setOnClickListener{
+            Toast.makeText(requireContext(), "Go to Fragment two 👉", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_fragmentOne_to_fragmentTwo)
         }
     }

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.simon.fragmentsnav.databinding.FragmentTwoBinding
 
@@ -37,11 +38,13 @@ class FragmentTwo : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         //navigate to homepage
         binding.buttonToFragmentOne.setOnClickListener{
+            Toast.makeText(requireContext(), "Go to homepage👈", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_fragmentTwo_to_fragmentOne)
         }
 
         //navigate to page3
         binding.buttonToFragmentThree.setOnClickListener{
+            Toast.makeText(requireContext(), "Go to Fragment three 👉", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_fragmentTwo_to_fragmentThree)
         }
     }

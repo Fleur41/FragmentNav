@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.simon.fragmentsnav.databinding.FragmentThreeBinding
 
@@ -36,6 +37,7 @@ class FragmentThree : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.buttonToHome.setOnClickListener{
+            Toast.makeText(requireContext(), "Go to home page 🏠", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_fragmentThree_to_fragmentOne)
         }
     }
