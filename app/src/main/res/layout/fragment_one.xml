@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginEnd="50dp"
-            android:text="Go to Fragment two" />
+            android:text="Home" />
 
     </LinearLayout>
 
