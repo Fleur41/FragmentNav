@@ -6,9 +6,25 @@
     tools:context=".FragmentTwo">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="horizontal"
+       android:gravity="center"
+       android:layout_margin="30dp">
+       <Button
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:id="@+id/button_to_fragment_three"
+           android:text="Back"
+           android:layout_weight="1"
+           android:layout_marginEnd="10dp"/>
 
+       <Button
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:id="@+id/button_to_fragment_one"
+           android:text="Next"
+           android:layout_weight="1" />
+   </LinearLayout>
 </FrameLayout>
